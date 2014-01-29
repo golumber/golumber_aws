@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repos/golumber/!svn/ver/478/wip/GoLumber/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/golumber/!svn/ver/478/wip/GoLumber/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/155/wip/GoLumber/config/database.yml
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/379/wip/GoLumber/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/golumber/!svn/ver/115/wip/GoLumber/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/115/wip/GoLumber/config/environment.rb
+END

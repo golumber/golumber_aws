@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/contact
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/contact/_form.html.erb
+END
+create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/contact/create.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/contact/index.html.erb
+END

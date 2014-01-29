@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="GoLumber"/>
+	</head>
+	<body>
+		
+		<div id="container">			
+			<div id="content">
+				<h1>Terms of Participation</h1>
+				<div id="MainText" class="gradient2">
+					Don't do stupid things to the site or towards other people.
+					</br>(this is generic enough that anything can be deemed as "stupid"...you have been warned!)
+				</div> <!-- end div#center -->
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+			</div> <!-- end div#content -->
+		</div> <!-- end div#container -->
+
+	</body>
+</html>
+

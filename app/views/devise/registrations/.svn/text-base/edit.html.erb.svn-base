@@ -1,0 +1,27 @@
+		<div id="container">			
+			<div id="content">
+				<h1>Sign Up</h1>
+				<div id="login" class="gradient2">
+					<div id="wrappingLog">
+						<% if notice %>
+    						<p class="notice"><%= notice %></p>
+						<% end %>
+						<% if alert %>
+							<p class="alert"><%= alert %></p>
+						<% end %>			
+						<h2>Edit <%= resource_name.to_s.humanize %></h2>	
+						<%= render 'formEdit' %>
+						<div class='actions' style='clear: left;'>
+						  <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>
+						</div>
+
+            <div class='field' style='clear: left;'>
+  						<%= link_to "Back", :back %>
+  				  </div>
+					</div>
+				</div> <!-- end div#center -->
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+			</div> <!-- end div#content -->
+		</div> <!-- end div#container -->

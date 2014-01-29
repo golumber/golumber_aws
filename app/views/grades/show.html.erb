@@ -1,0 +1,21 @@
+<div id="container">	
+	<div id="content">
+		<h1>Created Custom Grades</h1>
+		<div id="MainText" class="gradient2">
+			<p id="notice"><%= notice %></p>
+			<p>
+  			<b>Name:</b>
+  			<%= @grade.name %>
+			</p>
+			<p>
+			  <b>Description:</b>
+			  <%= @grade.description %>
+			</p>
+			<%= link_to 'My Inventory', products_path %> |
+			<%= link_to 'My Grades', grades_path %>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>

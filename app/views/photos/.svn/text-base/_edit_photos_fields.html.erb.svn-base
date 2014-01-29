@@ -1,0 +1,58 @@
+<%
+=begin %>
+  Displays the form inputs for editing and adding the specified imageable's photos
+  @param imageable: the imageable whose photos are to be edited
+  @param f: the form builder for the imageable's form
+  @usage:
+  <%= render 'photos/edit_photos_fields', {:imageable => @product, :f => :f} %>
+<%
+=end %>
+<% if local_assigns.has_key? :imageable and !imageable.nil? and
+      local_assigns.has_key? :f         and !f.nil? %>
+	<div class="field">
+		<% if imageable.photos.length > 1 %>
+			<%= label_tag :edit_photos, "Edit Photos", :class => "field" %>
+			<div class = "field">
+				<%= f.fields_for :photos do |photoBuilder| %>
+					<% if !photoBuilder.object.id.nil? %>
+					  <div class="editPhotoField">
+				      <div class="floatLeft">
+				      	<%= render 'photos/lightbox_tag', {:photo => photoBuilder.object,
+				      	    :version => :large_thumbnail, :show_associated_photos => false} %>
+				      </div>
+					    <div class="clearLeft">
+					      <%= photoBuilder.label :caption %>
+					      <%= photoBuilder.text_field :caption, :class => "clearLeft", :style => "width: 196px;" %>
+					    </div>
+				      <div class="clearLeft">
+				      	<div class="inlineCheckRadio">
+					        <%= photoBuilder.check_box :_destroy, :class => "floatLeft" %>
+					        <%= photoBuilder.label :_destroy, 'Delete', :class => "floatLeft" %>
+								</div>
+				      	<div class="floatLeft">
+					        <%= f.radio_button :primary_photo_id, photoBuilder.object.id, :class => "floatLeft" %>
+					        <%= f.label :primary_photo_id, 'Primary', :class => "floatLeft" %>
+					      </div>
+				      </div>
+					  </div>
+					<% end %>
+					<% firstPhoto = false %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+	<% if imageable.photos.length < 4 %>
+		<%= f.fields_for :photos do |newPhoto| %>
+			<% if newPhoto.object.id.nil? %>
+				<div class="field">
+					<%= newPhoto.label :photo, "Add Photo", :class => "floatLeft" %>
+					<%= newPhoto.file_field :photo, :class => "clearLeft" %>
+				</div>
+				<div class="field">
+					<%= newPhoto.label :caption, "Photo Caption", :class => "floatLeft" %>
+					<%= newPhoto.text_field :caption, :class => "clearLeft" %>
+				</div>
+			<% end %>
+		<% end %>
+	<% end %>
+<% end %>

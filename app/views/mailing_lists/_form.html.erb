@@ -1,0 +1,35 @@
+<div class="specialForms">
+<%= form_for(@mailing_list) do |f| %>
+	<% if @mailing_list.errors.any? %>
+   		<div id="error_explanation">
+     		<h2><%= pluralize(@mailing_list.errors.count, "error") %> prohibited this mailing_list from being saved:</h2>
+      		<ul>
+      		<% @mailing_list.errors.full_messages.each do |msg| %>
+        		<li><%= msg %></li>
+      		<% end %>
+      			</ul>
+	    </div>
+	<% end %>
+	
+ 	<div class="field">
+    	<%= f.label :email %><br />
+	    <%= f.text_field :email %>
+  	</div>
+  	<div class="field">
+    	<%= f.label :contact_first %><br />
+	    <%= f.text_field :contact_first %>
+  	</div>
+  	<div class="field">
+    	<%= f.label :contact_last %><br />
+    	<%= f.text_field :contact_last %>
+  	</div>
+  	<div class="field">
+  		<%= f.hidden_field :company_id, :value => current_employee.company_id %>
+    </div>
+  	<div class="actions">
+    	<ul>
+    		<li><%= f.submit("Add Contact", :class => "genericButton")  %></li>
+    	</ul>
+  	</div>
+<% end %>
+</div>

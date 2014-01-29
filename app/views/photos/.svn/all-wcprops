@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/photos
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/golumber/!svn/ver/116/wip/GoLumber/app/views/photos/new.html.erb
+END
+_lightbox_tag.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/photos/_lightbox_tag.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/golumber/!svn/ver/116/wip/GoLumber/app/views/photos/show.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/golumber/!svn/ver/116/wip/GoLumber/app/views/photos/edit.html.erb
+END
+_edit_photos_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/golumber/!svn/ver/473/wip/GoLumber/app/views/photos/_edit_photos_fields.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/golumber/!svn/ver/116/wip/GoLumber/app/views/photos/index.html.erb
+END

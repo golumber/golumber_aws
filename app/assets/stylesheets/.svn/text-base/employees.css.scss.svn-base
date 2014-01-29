@@ -1,0 +1,42 @@
+// Place all the styles related to the Employees controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+form#signupform {
+  text-align: left;
+  margin: 0px;
+  }
+  label {
+    float: left;
+    font-weight: bold;
+    font-size: 16px;
+    }
+  textarea {
+    maxlength: 1500;
+    resize:none;
+    width: 500px;
+    height: 200px;
+    }
+    .boxes{
+       width: 12px;
+       }
+   #submitbutton{
+       margin-left: 120px;
+       margin-top: 5px;
+       width: 90px;
+       }
+       
+div#login{
+  min-width: 500px;
+  min-height: 180px;
+  border-radius: 30px; 
+  overflow:hidden;
+  height: 100%;
+  text-align: left;
+  padding: 5%;
+  position: relative;
+}
+
+div#wrappingLog{
+  width:325px;
+  margin:0px auto;
+}

@@ -1,0 +1,37 @@
+<head>
+
+</head>
+<body>
+	<div id="container">	
+		<div id="content">
+			<h1>Mailing List</h1>
+			<div id="holder">
+				<button id="sendNow" class="genericButton rightfloater">Send Now</button>	
+				<button id="previewStock" class="genericButton rightfloater">Preview Inventory Stock Sheet</button>				
+			</div><!-- end div#holder -->
+			
+			<div id="MainText" class="gradient2">
+				<h3>Inventory Distribution List</h3>
+				<div class="rightfloater">
+					<%= button_to 'Add Contact', new_mailing_list_path, :method => :get, :class => "genericButton" %>
+				</div>
+				
+				<table id="emailList">
+					<% @mailing_lists.each do |mailing_list| %>
+	  					<tr id="productRows">
+	    					<td><%= mailing_list.email %></td>
+	    					<td><%= mailing_list.contact_first %></td>
+	    					<td><%= mailing_list.contact_last %></td>
+	    					<td id="editRemove"><%= button_to  'Remove', mailing_list, :method => :delete, :confirm => "Are you sure you wish to delete #{mailing_list.contact_first} #{mailing_list.contact_last}?" , :class => "genericButton"%></td>
+	  					</tr>
+					<% end %>
+				</table>
+			</div><!-- end div#MainText -->
+			<div class= "footer">
+				<%=render :partial => 'layouts/footer'%>
+			</div>
+		</div>
+		</div> <!-- end div#content -->
+	</div> <!-- end div#container -->
+
+</body>

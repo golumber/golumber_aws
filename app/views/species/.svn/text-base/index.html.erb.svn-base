@@ -1,0 +1,30 @@
+<div id="container">	
+	<div id="content">
+		<h1>Listing of Custom Species</h1>
+		<div id="MainText" class="gradient2">
+			<table id="customSpeciesTable">
+  				<tr>
+  				   <th>Name</th>
+   				   <th>Type</th>
+  				   <th></th>
+   			 	   <th></th>
+  				   <th></th>
+  				</tr>
+
+  				<% @species.each do |species| %>
+  				  <tr id="customSpeciesRows">
+  				    <td><%= species.name %></td>
+  				    <td style="width:8%"><%= button_to 'Delete', species, :confirm => "Are you sure you wish to delete this #{species.name} listing?", :method => :delete , :class => "genericButton" %> 	  
+  				  </tr>
+  				<% end %>
+  				</table>
+  				<br />
+
+  				<%= button_to 'Add Species', new_species_path , :class => "genericButton", :method => :get %>
+				<%= link_to 'My Inventory', products_path %>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>

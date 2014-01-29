@@ -1,0 +1,202 @@
+<%= form_for(@product, :html => {:novalidate => true, :multipart => true}) do |f| %>
+	<% if @product.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+			<ul>
+				<% @product.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div id="topDiv">
+ 		<div class="field">
+ 			<% f.object.is_active = true %>
+			<%= f.check_box :is_active, :class => "clearLeft", :tabindex => 1 %>
+			<%= f.label :is_active, "Active" , :class => "smallLabel floatLeft" %>
+		</div>
+	  <div class="field">
+		  <%= radio_button_tag "unit", "imperial", true, :class => "clearLeft", :tabindex => 2 %>
+		  <%= label_tag "unit_imperial", "Imperial (inches or fractions)", :class => "smallLabel floatLeft" %>
+		  <%= radio_button_tag "unit", "metric", false, :class => "clearLeft" %>
+		  <%= label_tag "unit_metric", "Metric (millimeters)", :class => "smallLabel" %>
+		</div>
+	</div>
+	
+	<!-- <div id="middleDiv"> -->
+		<div>
+			<%= f.label :region, "Region*" %>
+		</div>
+		<div style="float: left; clear: left;">
+			<%= f.select :region, options_for_select([
+				"Alabama",
+				"Alaska",
+				"Arizona",
+				"Arkansas",
+				"California",
+				"Colorado",
+				"Connecticut",
+				"Delaware",
+				"DC",
+				"Florida",
+				"Georgia",
+				"Hawaii",
+				"Idaho",
+				"Illinois",
+				"Indiana",
+				"Iowa",
+				"Kansas",
+				"Kentucky",
+				"Louisiana",
+				"Maine",
+				"Maryland",
+				"Massachusetts",
+				"Michigan",
+				"Minnesota",
+				"Mississippi",
+				"Missouri",
+				"Montana",
+				"Nebraska",
+				"Nevada",
+				"New Hampshire",
+				"New Jersey",
+				"New Mexico",
+				"New York",
+				"North Carolina",
+				"North Dakota",
+				"Ohio",
+				"Oklahoma",
+				"Oregon",
+				"Pennsylvania",
+				"Rhode Island",
+				"South Carolina",
+				"South Dakota",
+				"Tennessee",
+				"Texas",
+				"Utah",
+				"Vermont",
+				"Virginia",
+				"Washington",
+				"West Virginia",
+				"Wisconsin",
+				"Wyoming",
+				], :selected => f.object.region) %>
+		</div>
+		<br/>
+
+		<div id="leftDiv" style="float: left; clear: left;">
+			<div class="field" id="species">
+				<br/>
+				<%= f.label :species_id, "Species*", :class => "labelWithLink" %> 
+				<%= link_to "Add Species", "/species/new" %>
+				<%= f.select(:species_id, Species.order('name').collect {|c| [c.name, c.id]}, {:prompt => 'Select'}, :class => "clearLeft", :tabindex => 3) %>
+			</div>
+		</div>
+			
+			<div class="field imperial">
+				<%= f.label :thickness_imperial, "Thickness (in)*", :class => "floatLeft" %>
+				<%= f.label :thickness_actual, "Actual (in)*", :class => "floatLeft", :style => "margin-left:20px", :title => "very important for overseas buyers" %>
+				<%= f.label :the_x, "X", :class => "floatLeft", :style => "margin-left:20px" %>
+				<%= f.label :width_imperial, "Width (in)*", :class => "floatLeft", :style => "margin-left:20px" %>
+				<%= f.label :width_actual, "Actual (in)*", :class => "floatLeft", :style => "margin-left:20px", :title => "very important for overseas buyers" %>
+			</div>
+			<div class="field imperial">
+				<%= f.text_field :thickness_imperial, :class => "smallerInput imperialfield clearLeft", :style => "display: none;" %>
+				<input type="text" name="product_thickness_imperial_dummy" id="product_thickness_imperial_dummy" class="smallerInput imperialfield clearLeft" tabindex="3">
+				<%= f.number_field :thickness_actual, :class => "smallerInput imperialfield floatLeft", :tabindex => 4, :style => "margin-left:115px", :title => "very important for overseas buyers" %>
+				<%= f.text_field :width_imperial, :class => "smallerInput imperialfield floatLeft", :style => "display:none" %>
+				<input type="text" name="product_width_imperial_dummy" id="product_width_imperial_dummy" class="smallerInput imperialfield floatLeft" tabindex="5" style="margin-left:115px">
+				<%= f.number_field :width_actual, :class => "smallerInput imperialfield floatLeft", :tabindex => 6, :style => "margin-left:75px", :title => "very important for overseas buyers" %>
+			</div>
+			<div class="field metric floatLeft" style="display:none;">
+				<%= f.label :thickness_metric, "Thickness (mm)*", :class => "floatLeft" %>
+				<%= f.label :the_x, "X", :class => "floatLeft", :style => "margin-left:20px" %>
+				<%= f.label :width_metric, "Width (mm)*", :class => "floatLeft", :style => "margin-left:20px" %>
+			</div>
+			<div class="field metric floatLeft" style="display:none;">
+				<%= f.number_field :thickness_metric, :class => "smallerInput metricfield clearLeft", :tabindex => 3 %>
+				<%= f.number_field :width_metric, :class => "smallerInput metricfield floatLeft", :style => "margin-left:160px", :tabindex => 6 %>
+			</div>
+
+			<div class="field floatLeft">
+			  <%= label_tag :random_width, "Random Width", :class => "smallLabel" %>
+			  <%= check_box_tag :random_width, :tabindex => 7 %>
+			</div>			
+		
+		<div class="field" id="grade">
+			<%= f.label :grade_id, "Grade*", :class => "labelWithLink" %>
+			<%= link_to "Add Grade", "/grades/new" %>
+			<%= f.select(:grade_id, @company.grades.order('name').collect {|c| [c.name, c.id]}, {:prompt => 'Select'}, :class => "clearLeft", :tabindex => 8)%>
+		</div>
+		<div class="floatLeft", style="margin-left:50px">
+			<div class="field metric" style="display:none;">
+				<%= f.label :length, "Length (m)*", :class => "floatLeft" %>
+				<%= f.label :cubic_meters, "Quantity (M3)*", :class => "floatLeft", :style => "margin-left:15px" %>
+			</div>
+			<div class="field metric" style="display:none;">
+				<%= f.number_field :length_metric_lower, :class => "smallerInput metricfield clearLeft", :tabindex => 8 %>
+				<%= f.number_field :length_metric_upper, :class => "smallerInput metricfield floatLeft", :style=>"visibility:hidden;", :tabindex => 9 %>
+				<%= f.number_field :cubic_meters, :class => "smallerInput metricfield floatLeft", :style => "margin-left:40px", :tabindex => 11 %>
+			</div>
+			<div class="field imperial">
+				<%= f.label :length, "Length (ft)*" %>
+				<%= f.label :board_feet, "Footage (BF')*", :class => "floatLeft", :style => "margin-left:20px" %>
+			</div>
+			<div class="field imperial">
+				<%= f.number_field :length_imperial_lower, :class => "smallerInput imperialfield clearLeft", :tabindex => 8 %>
+				<%= f.number_field :length_imperial_upper, :class => "smallerInput imperialfield floatLeft", :style=>"visibility:hidden;", :tabindex => 9 %>
+				<%= f.number_field :board_feet, :class => "smallerInput imperialfield floatLeft", :style => "margin-left:40px", :tabindex => 11 %>
+			</div>
+		</div>
+		
+	 	<div class="floatRight">
+			  <div class="floatLeft" style="margin-right:10px">
+			  <%= label_tag "length_input_single", "Single", :class => "smallLabel"%>
+			  <%= radio_button_tag "length_input", "single", true, :tabindex => -1 %>
+			</div>
+		  <div class="floatLeft" style="margin-right:10px">
+			  <%= label_tag "length_input_ranged", "Range", :class => "smallLabel", :title => "Example: 8-16'"%>
+			  <%= radio_button_tag "length_input", "ranged" %>
+			</div>
+		  <div class="floatLeft" style="margin-right:10px">
+			  <%= label_tag "length_input_random", "Random", :class => "smallLabel"%>
+			  <%= radio_button_tag "length_input", "random" %>
+			</div>
+		</div>
+	
+	<div>
+		<div class="field">
+			<%= f.label :details, :class => "floatLeft" %>
+			<%= f.text_area :details, :placeholder => "Any additional details concerning this product.", :class => "clearLeft", :tabindex => 12 %>
+		</div>
+		<%= render :partial => 'photos/edit_photos_fields', :locals => {:f => f, :imageable => @product} %>
+	</div>
+			
+	<div class="actions clearLeft">
+		<div><small>*Required Fields</small></div>
+		<%= f.submit("Save", :class => "genericButton", :onClick => "ClearExtraFields()", :tabindex => 16) %>
+	</div>
+
+	<script type='text/javascript'>
+	//<![CDATA[
+	initializeProductForm();
+	
+	$(document).ready(function() {
+		$(document).on("change","#product_thickness_imperial_dummy", function() {
+			var imperial_thickness_val = $("#product_thickness_imperial_dummy").val();
+			var parsed_imperial_thickness_val = eval(imperial_thickness_val);
+			$("#product_thickness_actual").val(parsed_imperial_thickness_val);
+			$("#product_thickness_imperial").val(parsed_imperial_thickness_val);
+		}); 
+		$(document).on("change","#product_width_imperial_dummy", function() {
+			var imperial_width_val = $("#product_width_imperial_dummy").val();
+			var parsed_imperial_width_val = eval(imperial_width_val);
+			$("#product_width_actual").val(parsed_imperial_width_val);
+			$("#product_width_imperial").val(parsed_imperial_width_val);
+		}); 
+	});//]]> 
+	</script>
+
+<% end %>

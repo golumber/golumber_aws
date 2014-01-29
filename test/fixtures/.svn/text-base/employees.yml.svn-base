@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: "first"
+  last_name: "last"
+  email: "last.first@mail.name"
+  phone_number: "555-995-5559"
+  encrypted_password: "Password"
+  skype: "lastfirst"
+  company_id: "380777052"

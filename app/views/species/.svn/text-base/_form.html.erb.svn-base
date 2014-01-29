@@ -1,0 +1,22 @@
+<%= form_for(@species) do |f| %>
+  <% if @species.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@species.errors.count, "error") %> prohibited this grade from being saved:</h2>
+
+      <ul>
+      <% @species.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <br />
+  <div class="clearLeft">
+    <%= f.submit :class => "genericButton" %>
+  </div>
+<% end %>

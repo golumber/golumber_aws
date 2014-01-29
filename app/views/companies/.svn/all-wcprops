@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/companies
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/golumber/!svn/ver/456/wip/GoLumber/app/views/companies/index.html.erb
+END
+_formEdit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/companies/_formEdit.html.erb
+END
+_quickCompanyBio.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/golumber/!svn/ver/456/wip/GoLumber/app/views/companies/_quickCompanyBio.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/companies/new.html.erb
+END
+_formNew.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/golumber/!svn/ver/466/wip/GoLumber/app/views/companies/_formNew.html.erb
+END
+companyCreated.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/golumber/!svn/ver/333/wip/GoLumber/app/views/companies/companyCreated.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/456/wip/GoLumber/app/views/companies/show.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/450/wip/GoLumber/app/views/companies/edit.html.erb
+END

@@ -1,0 +1,35 @@
+<div id="container">	
+	<div id="content">
+		<h1>Mailing List</h1>
+		<div id="MainText" class="gradient2">
+			<div id="addContainer">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @mailing_list.email %>
+</p>
+
+<p>
+  <b>Contact first:</b>
+  <%= @mailing_list.contact_first %>
+</p>
+
+<p>
+  <b>Contact last:</b>
+  <%= @mailing_list.contact_last %>
+</p>
+
+
+<%= link_to 'Edit', edit_mailing_list_path(@mailing_list) %> |
+<%= link_to 'My Mailing List', mailing_lists_path %>
+
+			</div>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>
+

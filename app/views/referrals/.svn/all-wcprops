@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals/_form.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/golumber/!svn/ver/160/wip/GoLumber/app/views/referrals/index.html.erb
+END

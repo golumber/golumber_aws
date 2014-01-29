@@ -1,0 +1,93 @@
+class CompaniesController < ApplicationController
+  before_filter :auth_employee, :except => [:create, :new]
+  before_filter( :only => [:edit, :delete]) { |c| c.has_ability params[:id] }
+ 
+  # GET /companies
+  # GET /companies.json
+  def index
+    @companies = Company.all
+
+    respond_to do |format|
+      format.html index.html.erb
+      format.json { render json: @companies }
+    end
+  end
+
+  # GET /companies/1
+  # GET /companies/1.json
+  def show
+    @employee = current_employee
+    @company = Company.where(:id => params[:id]).first
+    @company_employee = Employee.where(:company_id => @company.id).first
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @company }
+    end
+  end
+
+  # GET /companies/new
+  # GET /companies/new.json
+  # a user just signed up and wants to create a company
+  def new
+    @company = Company.new
+    @company.photos.build
+  end
+
+  # GET /companies/1/edit
+  def edit
+    @company = Company.find(params[:id])
+    @company.photos.build
+  end
+
+  # POST /companies
+  # POST /companies.json
+  def create
+    @company = Company.new(params[:company])
+
+    respond_to do |format|
+      if @company.save
+        format.html { render "companyCreated.html.erb" }
+        format.json { render json: @company, status: :created, location: @company }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @company.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /companies/1
+  # PUT /companies/1.json
+  def update
+    @company = Company.find(params[:id])
+
+    respond_to do |format|
+      if @company.update_attributes(params[:company])
+        format.html { redirect_to @company, notice: 'User was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @company.errors, status: :unprocessable_entity }
+      end
+    end
+    params[:company][:photos_attributes].each do |photo_attributes_array|
+      photo_attributes = photo_attributes_array[1]
+      if !photo_attributes[:photo].nil?
+        @photo = @company.photos.build(photo_attributes)
+        @photo.save
+      end
+    end    
+  end
+
+  # DELETE /companies/1
+  # DELETE /companies/1.json
+  def destroy
+    @company = Company.find(params[:id])
+    @company.destroy
+
+    respond_to do |format|
+      format.html { redirect_to users_url }
+      format.json { head :no_content }
+    end
+  end
+end

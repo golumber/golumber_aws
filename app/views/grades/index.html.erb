@@ -1,0 +1,32 @@
+<div id="container">	
+	<div id="content">
+		<h1>Listing of Custom Grades</h1>
+		<div id="MainText" class="gradient2">
+			<table id="customSpeciesTable">
+  				<tr>
+  				   <th>Name</th>
+  				   <th>Description</th>
+   				   <th>Type</th>
+  				   <th></th>
+   			 	   <th></th>
+  				   <th></th>
+  				</tr>
+
+  				<% @grades.each do |grade| %>
+  				  <tr id="customSpeciesRows">
+  				    <td style="width:20%"><%= grade.name %></td>
+  				    <td><%= grade.description %></td>
+  				    <td style="width:8%"><%= button_to 'Delete', grade, :confirm => "Are you sure you wish to delete this #{grade.name} listing?", :method => :delete , :class => "genericButton" %> 	  
+  				  </tr>
+  				<% end %>
+  				</table>
+  				<br />
+
+  				<%= button_to 'Add Grade', new_grade_path , :class => "genericButton", :method => :get %>
+				<%= link_to 'My Inventory', products_path %>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>

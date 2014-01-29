@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/models
+END
+grade.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/478/wip/GoLumber/app/models/grade.rb
+END
+referral.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/golumber/!svn/ver/166/wip/GoLumber/app/models/referral.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/115/wip/GoLumber/app/models/.gitkeep
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/131/wip/GoLumber/app/models/message.rb
+END
+company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/models/company.rb
+END
+photo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/golumber/!svn/ver/464/wip/GoLumber/app/models/photo.rb
+END
+mailing_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/golumber/!svn/ver/161/wip/GoLumber/app/models/mailing_list.rb
+END
+species.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/463/wip/GoLumber/app/models/species.rb
+END
+ability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/156/wip/GoLumber/app/models/ability.rb
+END
+employee.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/golumber/!svn/ver/456/wip/GoLumber/app/models/employee.rb
+END
+unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/golumber/!svn/ver/136/wip/GoLumber/app/models/unit.rb
+END
+companies_grade.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/golumber/!svn/ver/288/wip/GoLumber/app/models/companies_grade.rb
+END
+product.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/golumber/!svn/ver/476/wip/GoLumber/app/models/product.rb
+END

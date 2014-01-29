@@ -1,0 +1,53 @@
+<%
+=begin %>
+	Displays a thumbnail of photo linked to a lightbox of photo and optionally
+	any other photos associated with photo through its imageable parent.
+	@param photo: the photo to be displayed
+	@param version: the version of photo to be displayed,
+			a list of which can be found in photo_uploader.rb
+			default value is 'small_thumbnail'
+	@param show_associated_photos: true if associated photos should be shown, false otherwise
+			default value is true
+	@param data_lightbox: the id used to associate various photos in a single lightbox.
+			use this to put photos from different imageables in the same lightbox.
+			default value is the photo's imageable type and id concatenated0
+	@usage:
+	<%= render 'photos/lightbox_tag',
+		{:photo => @company.primary_photo, :version => :large_thumbnail, :show_associated_photos => :false} %>
+	@usage:
+	<%= render 'photos/lightbox_tag',
+		{:photo => @product.primary_photo, :version => :small_thumbnail} %>
+	@usage:
+	<%= render 'photos/lightbox_tag',
+		{:photo => @product1.primary_photo, :version => :small_thumbnail,
+		 :show_associated_photos => :false, :lightbox_data => 'my_group'} %>
+	<%= render 'photos/lightbox_tag',
+		{:photo => @product2.primary_photo, :version => :small_thumbnail,
+		 :show_associated_photos => :false, :lightbox_data => 'my_group'} %>
+<%
+=end %>
+<% if !local_assigns.has_key? :version %>
+	<% version = 'small_thumbnail' %>
+<% end %>
+<% if !local_assigns.has_key? :show_associated_photos %>
+	<% show_associated_photos = true %>
+<% end %>
+<% if local_assigns.has_key? :photo and !photo.nil? %>
+	<% if !local_assigns.has_key? :data_lightbox %>
+		<% data_lightbox = photo.imageable_type.to_s + photo.imageable_id.to_s %>
+	<% end %>
+	<%= link_to(image_tag(photo.photo_url(version).to_s),
+							photo.photo_url.to_s,
+							{:"data-lightbox" => data_lightbox, :title => photo.caption}) %>
+	<% if show_associated_photos %>
+		<% photo.imageable.photos.each do |imageablePhoto| %>
+			<% if imageablePhoto.id != photo.id %>
+				<%= link_to("", imageablePhoto.photo_url.to_s,
+									 {:"data-lightbox" => data_lightbox, :title => imageablePhoto.caption,
+										:visibility => "hidden"}) %>
+			<% end %>
+		<% end %>
+	<% end %>
+<% else %>
+	<%= image_tag(asset_path("productTableDefault.png"), :size => "75x44") %>
+<% end %>

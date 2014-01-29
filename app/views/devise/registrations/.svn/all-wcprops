@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/devise/registrations
+END
+_formNew.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/devise/registrations/_formNew.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/golumber/!svn/ver/470/wip/GoLumber/app/views/devise/registrations/edit.html.erb
+END
+_formEdit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/golumber/!svn/ver/470/wip/GoLumber/app/views/devise/registrations/_formEdit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/golumber/!svn/ver/473/wip/GoLumber/app/views/devise/registrations/new.html.erb
+END

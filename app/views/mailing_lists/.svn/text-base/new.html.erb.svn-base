@@ -1,0 +1,15 @@
+<div id="container">	
+	<div id="content">
+		<h1>Mailing List</h1>
+		<div id="MainText" class="gradient2">
+		<div id="addContainer">
+			<%= render 'form' %>
+			<%= link_to 'My Mailing List', mailing_lists_path %>
+			
+		</div>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+		</div>
+		</div>

@@ -1,0 +1,35 @@
+<body>
+	
+	<div id="container">			
+		<div id="content">
+			<h1>About</h1>
+			<div id="AboutText" class="gradient2">
+				<b>Problem:</b></br>
+				<ul>
+					The global forest products industry is broad and complex.  Lumber buyers have the difficult task of finding the necessary products from the multitude of lumber suppliers found globally. There are thousands of lumber mills in the United States alone, and their methods of distributing their products have been the same for many years. Currently, sellers are limited to releasing a manually formatted list of their inventory by email and by fax to their current clients.  In addition to the difficulties of sellers reaching a large audience with their inventories, buyers face a challenge in locating the lumber products that they need for the price they want. Furthermore the industry lacks a unanimous standard of measure which raises communication issues between buyers and sellers.  It is therefore necessary to unify these systems of measurement if a globalized system is going to be established to serve the greater market.
+				</ul>
+			</div>
+			<div id="AboutText" class="gradient2">
+				<b>Approach:</b></br>
+				<ul>
+					FTI America is sponsoring the creation of GoLumber, a website that will serve as a sophisticated search engine and lumber community for the forest products industry. Our sponsor hopes to modernize the lumber industry. Lumber sellers will be able to post their current inventories through GoLumber for potential buyers to locate online. Potential buyers will have the ability and to search for specific lumber species and sizes. Users of GoLumber will also have the ability to post and view forest products in both metric and imperial measurement systems.  The sponsor’s goal is for GoLumber to be the place that buyers think of first when they are looking to purchase or sell lumber. This will be achieved by maintaining current aspects of the lumber trade within GoLumber, and utilizing the internet to connect buyers and sellers.
+				</ul>
+			</div>
+			<div id="AboutText" class="gradient2">
+				<b>The Team</b></br>
+					<ul>Doug Coulson - <i>Gonzaga University CPSC Senior Design 2012-13</i></ul>
+					<ul>Chad Gray - <i>Gonzaga University CPSC Senior Design 2012-13</i></ul>
+					<ul>Tiernan O'Rourke - <i>Gonzaga University CPSC Senior Design 2012-13</i></ul>
+					<ul>Sabrina Topacio - <i>Gonzaga University CPSC Senior Design 2012-13</i></ul>
+					<ul>Cal Larson - <i>FTI America</i></ul>
+			</div> <!-- end div#center -->
+			
+			<div class= "footer">
+				<%=render :partial => 'layouts/footer'%>
+			</div>
+		</div> <!-- end div#content -->
+		
+	</div> <!-- end div#container -->
+
+
+</body>

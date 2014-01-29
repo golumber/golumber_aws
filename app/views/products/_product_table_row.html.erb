@@ -1,0 +1,27 @@
+<%
+=begin %>
+  @usage: render by calling the "productTable" helper in products_helper.rb
+      productTable(@products, imperial, activityColumn)
+<%
+=end %>
+<tr>
+	<td><%= render 'photos/lightbox_tag', {:photo => product.primary_photo} %></div></td>
+	<td><%= product.species.name %></td>
+	<td><%= product.thickness(imperial) %></td>
+	<td><%= " X " %></td>
+	<td><%= product.width(imperial) %></td>
+	<td><%= product.grade.name %></td>
+	<td><%= product.length(imperial) %></td>
+	<td><%= product.volume(imperial) %></td>
+	<td><%= product.shortDetails %></td>
+	<% if activityColumn %>
+		<td><%= product.is_active ? "Active" : "Inactive" %></td>
+	<% end %>
+	<% if search %>
+		<td><%= product.region %></td>
+		<td><%= link_to(product.company.name, product.company) %></td>
+	<% end %>
+	<% if @employee.can_manage?(@company.id) %>
+		
+	<% end %>
+</tr>

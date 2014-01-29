@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+#one:
+#  is_active: false
+#  thickness: 1
+#  width: 1
+#  details: MyText
+#  length: 1
+
+#two:
+#  is_active: false
+#  thickness: 1
+#  width: 1
+#  details: MyText
+#  length: 1

@@ -1,0 +1,57 @@
+<head>
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <style>
+	                .faq-section label,
+	                .faq-section label:hover{
+	                        cursor: default;
+	                        background: #eee;
+	                }
+	                body .faq-section p{ /* Increase specificity */
+	                        display: block;
+	                        color: #444;
+	                        font-size: 1em;
+	                        text-overflow: clip;
+	                        white-space: normal;
+	                        overflow: visible;
+	                }
+	    </style>
+	<![endif]-->
+</head>
+<body>
+	
+	<div id="container">			
+		<div id="content">
+			<h1>FAQ</h1>
+			<div id="MainText" class="gradient2">
+				<section class="faq-section">
+				    <input type="checkbox" id="q1">
+				    <label for="q1">How does the GoLumber search work?</label>
+				    <br><br>
+				    <p>The GoLumber search is designed to always return a result for any search. In order for a search to work you must select a value for all 4 dropdown boxes. Every time you select a value for a drop down 
+				    	e.g. a Species the next dropdown will populate with information on active products that are on GoLumber. The search is also organized so that the first results will be the exactly what you search for 
+				    	and then will branch out and display similar products with different grades further down the page.</p>
+				</section>
+				<section class="faq-section">
+				    <input type="checkbox" id="q2">
+				    <label for="q2">Why are there two boxes for width and thickness?</label>
+				    <br><br>
+				    <p>The first box asks is the displayed width or thickness for your product. The second box is the actual dimensions for your product. It is also 
+				    	the value that GoLumber will use to convert your products dimensions into metric or imperial for international customers. 
+				    	<p>An example of this is a 2"x4" 
+				    	that actually has dimensions of 1.98" x 3.98". In this example you would enter 2 in the first thinkness box and 4 in the first width box. These will be displayed and searched on by US customers
+						While the 1.98 and 3.98 entered into the second box will be converted into a metric value for International Customers.
+						</p></p>
+				</section>
+			</div>
+			 <!-- end div#center -->
+			
+			<div class= "footer">
+				<%=render :partial => 'layouts/footer'%>
+			</div>
+		</div> <!-- end div#content -->
+		
+	</div> <!-- end div#container -->
+
+
+</body>

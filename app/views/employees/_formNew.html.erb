@@ -1,0 +1,148 @@
+<%= form_for @employee, :url => "employees", :html => {:multipart => true} do |f| %>
+  <% if not @employee.nil? and @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count + @company.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      <% @company.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if not @company.nil? and @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+    <% @company.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end%>
+  <% if not @photo.nil? and @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+    <% @photo.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end%>
+	<div id="leftDiv">
+		<div class="companyLabels">
+		  <div class="companyField">
+		    <%= f.label :first_name, "First Name" %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :last_name, "Last Name" %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :skype %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :email, "Email Address" %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :email_confirmation, "Confirmation" %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :password %>
+		  </div>
+		  <div class="companyField">
+		    <%= f.label :password_confirmation, "Confirmation" %>
+		  </div>
+		</div>
+		<div class="floatLeft">
+		  <div class="field">
+		    <%= f.text_field :first_name %>
+		  </div>
+		  <div class="field">
+		    <%= f.text_field :last_name %>
+		  </div>
+		  <div class="field">
+		    <%= f.text_field :skype %>
+		  </div>
+		  <div class="field">
+		    <%= f.email_field :email %>
+		  </div>
+		  <div class="field">
+		    <%= f.email_field :email_confirmation %>
+		  </div>
+		  <div class="field">
+		    <%= f.password_field :password %>
+		  </div>
+		  <div class="field">
+		    <%= f.password_field :password_confirmation %>
+		  </div>
+		</div>
+	</div>
+	<div id="rightDiv">
+		<div class="floatLeft">
+		  <div class="companyField">
+		    <%= label :company, :name, "Company Name" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :website, "Website" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :street_address, "Street Address" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :city, "City" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :state, "State" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :country, "Country" %>
+		  </div>
+		  <div class="companyField">
+		    <%= label :company, :zip_code, "Zip Code" %>
+		  </div>
+		</div>
+		<div class="floatLeft">
+		  <div class="field">
+		    <%= text_field :company, :name %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :website %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :street_address %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :city %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :state %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :country %>
+		  </div>
+		  <div class="field">
+		    <%= text_field :company, :zip_code %>
+		  </div>
+		</div>
+	</div> 
+  <div class="field">
+    <%= label :company, :destription, "Company Description", :class => "floatLeft" %>
+    <%= text_area :company, :description, :class => "clearLeft" %>
+  </div>
+
+  <div class="field">
+    <%= label :logo, :photo, "Company Logo" %><br>
+    <%= file_field :logo, :photo %>
+  </div>
+  <%= hidden_field :logo, :caption, :value => "Company Logo" %>
+
+  <div class="field">
+   <%= f.submit "Sign up" , :class => "genericButton" %>
+  </div>
+<% end %>
+<div class="clearLeft">
+	<%= render "devise/shared/links" %>
+</div>

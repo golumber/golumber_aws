@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/golumber/!svn/ver/381/wip/GoLumber/app/views/mailing_lists
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/golumber/!svn/ver/334/wip/GoLumber/app/views/mailing_lists/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/golumber/!svn/ver/381/wip/GoLumber/app/views/mailing_lists/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/golumber/!svn/ver/346/wip/GoLumber/app/views/mailing_lists/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/golumber/!svn/ver/346/wip/GoLumber/app/views/mailing_lists/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/golumber/!svn/ver/346/wip/GoLumber/app/views/mailing_lists/_form.html.erb
+END

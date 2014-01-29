@@ -1,0 +1,62 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+GoLumber:
+  name: "Go Lumber"
+  website: "www.golumber.com"
+  phone_number: "555-555-5555"
+  street_address: "502 E Boone Ave"
+  city: "Spokane"
+  state: "WA"
+  country: "USA"
+  zip_code: 99258
+  is_admin: true
+
+ClearWater:
+  name: "Clear Water"
+  website: "www.clear.com"
+  phone_number: "425-555-5555"
+  street_address: "917 E Nora Ave"
+  city: "Spokane"
+  state: "WA"
+  country: "USA"
+  zip_code: 98074
+
+GlobalLumber:
+  name: "GlobalLumber"
+  website: "www.globallumber.com"
+  phone_number: "206-555-5555"
+  street_address: "917 Main St"
+  city: "Seattle"
+  state: "WA"
+  country: "USA"
+  zip_code: 98884
+  
+GonzagaTimber:
+  name: "GonzagaTimber"
+  website: "www.gonzaga.com"
+  phone_number: "509-333-5555"
+  street_address: "502 Boone"
+  city: "Spokane"
+  state: "WA"
+  country: "USA"
+  zip_code: 98884
+  
+WesternMill:
+  name: "WesternMill"
+  website: "www.western.com"
+  phone_number: "999-333-5555"
+  street_address: "302 St. North"
+  city: "Bremerton"
+  state: "WA"
+  country: "USA"
+  zip_code: 99033
+  
+SeattleLLC:
+  name: "SeattleLLC"
+  website: "www.sea.com"
+  phone_number: "206-234-6000"
+  street_address: "Sprague"
+  city: "Seattle"
+  state: "WA"
+  country: "USA"
+  zip_code: 98884

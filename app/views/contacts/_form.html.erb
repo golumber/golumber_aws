@@ -1,0 +1,32 @@
+<%= form_for @message, :url => contacts_path do |x| %>
+	<% if notice %>
+   		<p class="notice"><%= notice %></p>
+   	<% end %>
+	<% if alert %>
+		<p class="alert"><%= alert %></p>
+	<% end %>		
+  <fieldset class="fields">
+    <div class="field">
+      <%= x.label :name %>
+      <%= x.text_field :name %>
+    </div>
+    
+    <div class="field">
+      <%= x.label :email %>
+      <%= x.text_field :email %>
+    </div>
+    <div class="field">
+      <%= x.label :subject %>
+      <%= x.text_field :subject %>
+    </div>
+    
+    <div class="field">
+      <%= x.label :body %>
+      <%= x.text_area :body %>
+    </div>
+  </fieldset>
+  
+  <fieldset class="actions">
+    <%= x.submit "Send" %>
+  </fieldset>
+<% end %>

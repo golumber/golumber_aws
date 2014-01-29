@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/golumber/!svn/ver/176/wip/GoLumber/app/mailers
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/golumber/!svn/ver/115/wip/GoLumber/app/mailers/.gitkeep
+END
+confirmation_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/golumber/!svn/ver/176/wip/GoLumber/app/mailers/confirmation_mailer.rb
+END
+notifications_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/golumber/!svn/ver/131/wip/GoLumber/app/mailers/notifications_mailer.rb
+END

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+Imperial:
+  description: "The imperial unit system used in the US with inches written as decimals: feet and inches."
+  name: "Decimal Imperial"
+
+Quarter:
+  description: "The imperial unit system used in the US with quarter inches: feet and quarter inches."
+  name: "Fraction Imperial"
+
+Metric:
+  description: "The metric unit system: millimeters."
+  name: "Metric"

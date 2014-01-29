@@ -1,0 +1,127 @@
+<%= form_for(@product, :html => {:novalidate => true, :multipart => true}) do |f| %>
+	<% if @product.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+			<ul>
+				<% @product.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div id="topDiv">
+		<div class="field">
+			<%= f.check_box :is_active , :class => "clearLeft", :tabindex => 1 %>
+			<%= f.label :is_active, "Active" , :class => "smallLabel floatLeft" %>
+		</div>
+	  <div class="field">
+		  <%= radio_button_tag "unit", "imperial", true, :class => "clearLeft", :tabindex => 2 %>
+		  <%= label_tag "unit_imperial", "Imperial (inches or fractions)", :class => "smallLabel floatLeft" %>
+		  <%= radio_button_tag "unit", "metric", false, :class => "clearLeft" %>
+		  <%= label_tag "unit_metric", "Metric (millimeters)", :class => "smallLabel floatLeft" %>
+		</div>
+	</div>
+	
+	<div id="middleDiv">
+		<div id="leftDiv">
+			<div class="field" id="species">
+				<%= f.label :species_id, "Species *", :class => "labelWithLink" %> 
+				<%= link_to "Add Species", "/species/new" %>
+				<%= f.select(:species_id, Species.order('name').collect {|c| [c.name, c.id]}, {:prompt => 'Select'}, :class => "clearLeft", :tabindex => 3) %>
+			</div>
+			
+			<div class="clearLeft">
+				<div class="field imperial">
+					<%= f.label :thickness_imperial, "Thickness (in) *", :class => "floatLeft" %>
+					<%= f.text_field :thickness_imperial, :class => "smallerInput imperialfield clearLeft", :tabindex => 3 %>
+				</div>
+				<div class="field imperial">
+					<%= f.label :width_imperial, "Width (in) *", :class => "floatLeft" %>
+					<%= f.text_field :width_imperial, :class => "smallerInput imperialfield clearLeft", :tabindex => 5 %>
+				</div>
+				<div class="field metric" style="display:none;">
+					<%= f.label :thickness_metric, "Thickness (mm) *", :class => "floatLeft" %>
+					<%= f.number_field :thickness_metric, :class => "smallerInput metricfield clearLeft", :tabindex => 3 %>
+				</div>
+				<div class="field metric" style="display:none;">
+					<%= f.label :width_metric, "Width (mm) *", :class => "floatLeft" %>
+					<%= f.number_field :width_metric, :class => "smallerInput metricfield clearLeft", :tabindex => 6 %>
+				</div>
+			</div>
+			<div class="floatLeft">
+				<div class="field imperial">
+					<%= f.label :thickness_actual, "Actual Thickness (in) *", :class => "floatLeft", :title => "very important for overseas buyers" %>
+					<%= f.number_field :thickness_actual, :class => "smallerInput imperialfield clearLeft", :tabindex => 4, :title => "very important for overseas buyers" %>
+				</div>
+				<div class="field imperial">
+					<%= f.label :width_actual, "Actual Width (in) *", :class => "floatLeft", :title => "very important for overseas buyers" %>
+					<%= f.number_field :width_actual, :class => "smallerInput imperialfield clearLeft", :tabindex => 6, :title => "very important for overseas buyers" %>
+				</div>
+			</div>
+			<div class="field">
+			  <%= label_tag :random_width, "Random Width", :class => "smallLabel" %>
+			  <%= check_box_tag :random_width, :tabindex => 7 %>
+			</div>			
+		</div>
+		
+		<div id="rightDiv">
+			<div class="field" id="grade">
+				<%= f.label :grade_id, "Grade *", :class => "labelWithLink" %>
+				<%= link_to "Add Grade", "/grades/new" %>
+				<%= f.select(:grade_id, @company.grades.order('name').collect {|c| [c.name, c.id]}, {:prompt => 'Select'}, :class => "clearLeft", :tabindex => 8)%>
+			</div>
+			<div class="clearLeft">
+				<div class="field metric" style="display:none;">
+					<%= f.label :length, "Length (m) *", :class => "floatLeft" %>
+					<%= f.number_field :length_metric_lower, :class => "smallerInput metricfield clearLeft", :tabindex => 8 %>
+					<%= f.number_field :length_metric_upper, :class => "smallerInput metricfield floatLeft", :style=>"visibility:hidden;", :tabindex => 9 %>
+				</div>
+				<div class="field imperial">
+					<%= f.label :length, "Length (ft) *" %>
+					<%= f.number_field :length_imperial_lower, :class => "smallerInput imperialfield clearLeft", :tabindex => 8 %>
+					<%= f.number_field :length_imperial_upper, :class => "smallerInput imperialfield floatLeft", :style=>"visibility:hidden;", :tabindex => 9 %>
+				</div>
+			</div>
+			
+			<div class="floatRight">
+			  <div class="floatLeft" style="margin-right:5px">
+				  <%= label_tag "length_input_single", "Single", :class => "smallLabel"%>
+				  <%= radio_button_tag "length_input", "single", true, :tabindex => 10 %>
+				</div>
+			  <div class="floatLeft" style="margin-right:5px">
+				  <%= label_tag "length_input_ranged", "Ranged", :class => "smallLabel"%>
+				  <%= radio_button_tag "length_input", "ranged" %>
+				</div>
+			  <div class="floatLeft" style="margin-right:5px">
+				  <%= label_tag "length_input_random", "Random", :class => "smallLabel"%>
+				  <%= radio_button_tag "length_input", "random" %>
+				</div>
+			</div>
+			
+			<div class="field metric" style="display:none;">
+				<%= f.label :cubic_meters, "Quantity (M3) *", :class => "floatLeft" %>
+				<%= f.number_field :cubic_meters, :class => "smallerInput metricfield clearLeft", :tabindex => 11 %>
+			</div>
+			<div class="field imperial">
+				<%= f.label :board_feet, "Footage (BF') *", :class => "floatLeft" %>
+				<%= f.number_field :board_feet, :class => "smallerInput imperialfield clearLeft", :tabindex => 11 %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="floatLeft">
+		<div class="field">
+			<%= f.label :details, :class => "floatLeft" %>
+			<%= f.text_area :details, :placeholder => "Any additional details concerning this product.", :class => "clearLeft", :tabindex => 12 %>
+		</div>
+		<%= render :partial => 'photos/edit_photos_fields', :locals => {:f => f, :imageable => @product} %>
+	</div>
+			
+	<div class="actions clearLeft">
+		<div><small>*Required Fields</small></div>
+		<%= f.submit("Save", :class => "genericButton", :onClick => "ClearExtraFields()", :tabindex => 16) %>
+	</div>
+	<%= javascript_tag("initializeProductForm();") %>
+<% end %>

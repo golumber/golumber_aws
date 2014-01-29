@@ -1,0 +1,18 @@
+<div id="container">	
+	<div id="content">
+		<h1>Created Custom Species</h1>
+		<div id="MainText" class="gradient2">
+			<p id="notice"><%= notice %></p>
+			<p>
+  			<b>Name:</b>
+  			<%= @species.name %>
+			</p>
+			<p>
+			<%= link_to 'My Inventory', products_path %> |
+			<%= link_to 'My Species', species_index_path %>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>

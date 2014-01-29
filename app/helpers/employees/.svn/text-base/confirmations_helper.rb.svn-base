@@ -1,0 +1,2 @@
+module Employees::ConfirmationsHelper
+end

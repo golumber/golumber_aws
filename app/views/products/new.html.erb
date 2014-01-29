@@ -1,0 +1,24 @@
+<div id="container">	
+	<div id="content">
+		<h1>Add Product</h1>
+		<div id="MainText" class="gradient2">
+			<% if notice %>
+    			<p class="notice"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+				<p class="alert"><%= alert %></p>
+			<% end %>			
+			<div id="specialForms">
+				<%= render 'form' %>
+				<div  style="clear: left;">
+					<%= link_to 'My Inventory', products_path %> |
+					<%= link_to 'My Species', species_index_path %> |
+					<%= link_to 'My Grades', grades_path %> 
+				</div>
+			</div>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>

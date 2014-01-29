@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/views/products
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/468/wip/GoLumber/app/views/products/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/golumber/!svn/ver/479/wip/GoLumber/app/views/products/search.html.erb
+END
+_product_table.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/golumber/!svn/ver/478/wip/GoLumber/app/views/products/_product_table.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/477/wip/GoLumber/app/views/products/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/golumber/!svn/ver/468/wip/GoLumber/app/views/products/new.html.erb
+END
+_product_table_row.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/views/products/_product_table_row.html.erb
+END
+table.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/views/products/table.js.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/golumber/!svn/ver/334/wip/GoLumber/app/views/products/show.html.erb
+END
+_product_table_headers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/golumber/!svn/ver/480/wip/GoLumber/app/views/products/_product_table_headers.html.erb
+END
+update_search_selects.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/golumber/!svn/ver/479/wip/GoLumber/app/views/products/update_search_selects.js.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/golumber/!svn/ver/478/wip/GoLumber/app/views/products/_form.html.erb
+END

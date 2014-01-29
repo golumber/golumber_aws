@@ -1,0 +1,40 @@
+<body>
+	<div id="container">		
+		<div id="content">
+			<div id="search">
+				<%= image_tag ("logo500.png") %>
+				
+				<div class="searchUnit">
+					<div style="display: inline-block;">
+						<%= label_tag "unit_imperial", "Imperial", :class => "smallLabel" %>
+						<%= radio_button_tag "unit", "imperial", true, :class => "update_products" %>
+					</div>
+					<div style="display: inline-block;">
+						<%= label_tag "unit_metirc", "Metric", :class => "smallLabel" %>
+						<%= radio_button_tag "unit", "metric", false, :class => "update_products" %>
+					</div>
+				</div>
+				<div>
+					<%= form_tag "/table", :remote => true, :method => :get do %>
+						<%= select_tag :species, options_for_select([["Species", {:disabled => "yes"}]], "Species") + options_from_collection_for_select(@species, :id, :name) %>
+						<%= select_tag :thickness, options_for_select([["Thickness", {:disabled => true}]], "Thickness"), :disabled => true %>
+						<%= select_tag :width, options_for_select([["Width", {:disabled => true}]], "Width"), :disabled => true %>
+						<%= select_tag :grade, options_for_select([["Grade", {:disabled => true}]], "Grade"), :disabled => true %>
+					<% end %>
+				</div>
+			</div>
+			<div id="results" class="gradient2">
+				<div id='results_tag'><h2><%= @results_tag %></h2></div>
+				<div class="results">
+					<div id="productTable"></div>
+				</div>
+			</div>
+			
+			
+			<div class= "footer">
+				<%=render :partial => 'layouts/footer'%>
+			</div>
+		</div> <!-- end div#content -->
+	</div> <!-- end div#container -->
+	<%= javascript_tag("initializeSearch();") %>
+</body>

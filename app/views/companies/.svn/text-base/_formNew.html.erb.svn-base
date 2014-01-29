@@ -1,0 +1,108 @@
+<%= form_for @company do |f| %>
+  <% if not @employee.nil? and @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count + @company.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      <% @company.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if not @company.nil? and @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+    <% @company.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end%>
+  <% if not @photo.nil? and @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited you from signing up for GoLumber:</h2>
+      <ul>
+    <% @photo.errors.full_messages.each do |cmsg| %>
+        <li><%= cmsg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end%>
+
+  <%= f.fields_for :employees do |newEmployee| %>
+    <div class="field" >
+      <%= newEmployee.label :first_name, "First Name" %>
+      <%= newEmployee.text_field :first_name %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :last_name, "Last Name" %>
+      <%= newEmployee.text_field :last_name %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :skype %>
+      <%= newEmployee.text_field :skype %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :email, "Email Address" %>
+      <%= newEmployee.email_field :email %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :email_confirmation, "Email Address Confirmation" %>
+      <%= newEmployee.email_field :email_confirmation %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :password %>
+      <%= newEmployee.password_field :password %>
+    </div>
+    <div class="field" >
+      <%= newEmployee.label :password_confirmation, "Password Confirmation" %>
+      <%= newEmployee.password_field :password_confirmation %>
+    </div>
+  <% end %>
+	<div class="field" >
+  	<%= f.label :name, "Company Name" %>
+  	<%= f.text_field :name %>
+	</div>
+  <div class="field" >
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field" >
+    <%= f.label :street_address, "Street Address" %>
+    <%= f.text_field :street_address %>
+  </div>
+	<div class="field" >
+  	<%= f.label :city %>
+  	<%= f.text_field :city %>
+	</div>
+	<div class="field" >
+  	<%= f.label :state %>
+  	<%= f.text_field :state %>
+	</div>
+	<div class="field" >
+  	<%= f.label :country %>
+  	<%= f.text_field :country %>
+	</div>
+	<div class="field" >
+  	<%= f.label :zip_code, "Zip Code" %>
+  	<%= f.text_field :zip_code %>
+	</div>
+  <div class="field" >
+    <%= f.label :destription, "Company Description" %>
+    <%= f.text_area :description %>
+  </div>
+  <%= f.fields_for :photos do |newPhoto| %>
+    <div class="field" >
+      <%= newPhoto.label :photo, "Company Logo" %><br>
+      <%= newPhoto.file_field :photo %>
+    </div>
+    <%= newPhoto.hidden_field :caption, :value => "Company Logo" %>
+  <% end %>
+	<div class="field" >
+	 <%= f.submit "Sign up" , :class => "genericButton" %>
+  </div> 
+<%end%>

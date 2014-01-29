@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GoLumber: A Global Lumber Community</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body class="gradient3">
+	<div class="header gradient1">
+		<div class="headerHolder">
+			<div id="logo">
+				<%= link_to (image_tag ("gg50x50.png"), :title => "GoLumber.com"), '/'%>
+			</div>
+			<div id="headerLinks">
+				<ul>
+				<li>
+					<%= button_to "Home", '/', :method => "get", :class => 'button gradient1' %>
+					</li>
+				<li>
+				    <% if current_employee == nil %>
+					<%= button_to "My Company", "/companies/", :method => "get", :class => 'button gradient1' %>
+					<% else %>
+					<%= button_to "My Company", "/companies/#{current_employee.company_id}", :method => "get", :class => 'button gradient1' %>
+					<% end %>
+				</li>
+				<li>
+					<%= button_to "My Mailing List", mailing_lists_path, :method => "get", :class => 'button gradient1' %>
+				</li>
+				<li>
+					<%= button_to "My Inventory", products_path, :method => "get", :class => 'button gradient1' %>
+				</li>
+				<li>
+					<%= button_to "About", about_index_path, :method => "get", :class => 'button gradient1' %>
+				</li>
+				<% if employee_signed_in? %>
+				<li>
+					<%= button_to "Sign Out", destroy_employee_session_path, :method => :delete, :class => 'button gradient1' %>
+				</li>
+				<% else %>
+				<li>
+					<%= button_to "Sign In", '/login', :method => "get", :class => 'button gradient1' %>
+				</li>
+				<% end %>
+				</ul>
+			</div>
+		</div>
+	</div> 
+	
+<%= yield %>
+<!--
+	this is the flash message, devise wanted it? read about it here:
+	http://guides.rubyonrails.org/action_controller_overview.html#the-flash
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  -->
+</body>
+</html>

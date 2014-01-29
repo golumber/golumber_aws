@@ -1,0 +1,193 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+Alder:
+  name: Alder
+  default: 1
+
+Ash:
+  name: Ash
+  default: 1
+
+Aspen:
+  name: Aspen
+  default: 1
+
+Basswood:
+  name: Basswood
+  default: 1
+
+Beach:
+  name: Beach
+  default: 1
+
+Beech_European:
+  name: Beech – European
+  default: 1
+  
+Birch_Baltic:
+  name: Birch – Baltic
+  default: 1
+  
+Birch_White:
+  name: Birch – White
+  default: 1
+
+Birch_Yellow:
+  name: Birch – Yellow
+  default: 1
+
+Butternut:
+  name: Butternut
+  default: 1
+
+Cherry:
+  name: Cherry
+  default: 1
+
+Cottonwood:
+  name: Cottonwood
+  default: 1
+
+Cypress:
+  name: Cypress
+  default: 1
+
+Elm:
+  name: Elm
+  default: 1
+
+Gum:
+  name: Gum
+  default: 1
+
+Hackberry:
+  name: Hackberry
+  default: 1
+
+Hickory_Pecan:
+  name: Hickory – Pecan
+  default: 1
+
+Locust_Black:
+  name: Locust – Black
+  default: 1
+
+Maple_Hard:
+  name: Maple – Hard
+  default: 1
+
+Maple_Soft:
+  name: Maple – Soft
+  default: 1
+
+Maple_Western:
+  name: Maple – Western
+  default: 1
+
+Oak_Red:
+  name: Oak – Red
+  default: 1
+
+Oak_White:
+  name: Oak – White
+  default: 1
+
+Poplar:
+  name: Poplar
+  default: 1
+
+Sassafras:
+  name: Sassafras
+  default: 1
+
+Sycamore:
+  name: Sycamore
+  default: 1
+
+Tupelo:
+  name: Tupelo
+  default: 1
+
+Walnut:
+  name: Walnut
+  default: 1
+
+Willow:
+  name: Willow
+  default: 1
+
+Cedar_Eastern:
+  name: Cedar – Eastern
+  default: 1
+
+Cedar_Incense:
+  name: Cedar – Incense
+  default: 1
+
+Cedar_Northern_White:
+  name: Cedar – Northern White
+  default: 1
+
+Cedar_Southern_White:
+  name: Cedar – Southern White
+  default: 1
+
+Cedar_Western_Red:
+  name: Cedar – Western Red
+  default: 1
+
+Cedar_Yellow:
+  name: Cedar_Yellow
+  default: 1
+
+Douglas-fir:
+  name: Douglas-fir
+  default: 1
+
+Eastern_White_Pine:
+  name: Eastern White Pine
+  default: 1
+
+Engelmann_Spruce_Lodge_Pole_Pine:
+  name: Engelmann Spruce – Lodge Pole Pine
+  default: 1
+
+Fir_Larch:
+  name: "Fir & Larch"
+  default: 1
+
+Hem-Fir:
+  name: Hem-Fir
+  default: 1
+
+Hemlock:
+  name: Hemlock
+  default: 1
+
+Ponderosa_PINE:
+  name: Ponderosa PINE
+  default: 1
+
+Redwood:
+  name: Redwood
+  default: 1
+
+Southern_Pine:
+  name: Southern Pine
+  default: 1
+
+SPF(Spruce-Pine-Fir):
+  name: SPF (Spruce-Pine-Fir)
+  default: 1
+
+Spruce_Sitka:
+  name: Spruce – Sitka
+  default: 1
+
+Spruce_White:
+  name: Spruce – White
+  default: 1
+
+White_fir:
+  name: White fir
+  default: 1

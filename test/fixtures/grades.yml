@@ -1,0 +1,108 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+#
+#fas/1f:
+#  name: "FAS/1f"
+#  default: 1
+#
+#prime:
+#  name: "Prime"
+#
+#select_better:
+#  name: "Select & Better"
+#  default: 1
+#  
+#com_sel:
+#scr  name: Com-Sel
+#  default: 1
+#  
+#one_common_better:
+#  name: "#1 Common & Better"
+#  default: 1
+#  
+#one_common:
+#  name: "#1 Common"
+#  default: 1
+#  
+#two_common_better:
+#  name: "#2 Common & Better"
+#  default: 1
+#  
+#two_a_common:
+#  name: "#2A Common"
+#  default: 1
+#
+#two_common:
+#  name: "#2 Common"
+#  default: 1
+#  
+#three_common_better:
+#  name: "#3 Common & Better"
+#  default: 1
+# 
+#three_two_common:
+#  name: "#3 & #2 Common"
+#  default: 1
+#
+#three_a_common:
+#  name: "#3A Common"
+#  default: 1
+#
+#three_common:
+#  name: "#3 Common"
+#  default: 1
+#
+#pallet_stock:
+#  name: Pallet Stock
+#  default: 1
+#
+#superiors:
+#  name: Superiors
+#  default: 1
+#
+#cabinet:
+#  name: Cabinet
+#  default: 1
+#
+#custom_shop:
+#  name: Custom Shop
+#  default: 1
+#
+#one_shop:
+#  name: "#1 Shop"
+#  default: 1
+#
+#two_shop:
+#  name: "#2 Shop"
+#  default: 1
+#
+#three_shop:
+#  name: "#3 Shop"
+#  default: 1
+#  
+#d_better:
+#  name: "D & Better"
+#  default: 1
+#
+#furniture_grade:
+#  name: Furniture Grade
+#  default: 1
+#  
+#standard_grade:
+#  name: Standard Grade
+#  default: 1
+#
+#premium_grade:
+#  name: Premium Grade
+#  default: 1
+#
+#pattern:
+#  name: Pattern
+#  default: 1
+#  
+#kstrip:
+#  name: K-Strip
+#  default: 1
+#  
+#rustic:
+#  name: Rustic
+#  default: 1

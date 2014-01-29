@@ -1,0 +1,42 @@
+<div id="container">	
+	<div id="content">
+		<h1>Add Product</h1>
+		<div id="MainText" class="gradient2">
+			<div id="specialForms">
+				<p>
+				  <b>Is active:</b>
+				  <%= @product.is_active %>
+				</p>
+				
+				<p>
+				  <b>Thickness:</b>
+				  <%= @product.thickness_metric_gross %>
+				</p>
+				
+				<p>
+				  <b>Width:</b>
+				  <%= @product.width_metric_gross %>
+				</p>
+				
+				<p>
+				  <b>Details:</b>
+				  <%= @product.details %>
+				</p>
+				
+				<p>
+				  <b>Length:</b>
+				  <%= @product.length_metric_lower %>
+				</p>
+				
+				
+				<%= link_to 'Edit', edit_product_path(@product) %> |
+				<%= link_to 'Back', products_path %>
+			</div>
+		</div>
+				<div class= "footer">
+					<%=render :partial => 'layouts/footer'%>
+				</div>
+	</div>
+</div>
+
+

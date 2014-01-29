@@ -1,0 +1,4 @@
+$("#productTable").replaceWith("<%= j productTable(@products, @imperial, @activityColumn, @search) %>")
+<% if @search %>
+	$("#results_tag").html('<h2><%= j @results_tag %></h2>')
+<% end %>

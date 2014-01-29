@@ -1,0 +1,22 @@
+<% if @selected_width.nil? %>
+	$("#grade").html('<%= j options_for_select([["Grade", {:disabled => true}]], "Grade") %>')
+	$("#grade").prop('disabled', true)
+	<% if @selected_thickness.nil? %>
+		$("#width").html('<%= j options_for_select([["Width", {:disabled => true}]], "Width") %>')
+		$("#width").prop('disabled', true)
+		<% if @selected_species.nil? %>
+			$("#thickness").html('<%= j options_for_select([["Thickness", {:disabled => true}]], "Thickness") %>')
+			$("#thickness").prop('disabled', true)
+			$("#species").html('<%= j(options_for_select([["Species", {:disabled => "yes"}]], "Species") + options_from_collection_for_select(@species, :id, :name)) %>')
+		<% else %>
+			$("#thickness").html('<%= j(options_for_select([["Thickness", {:disabled => "yes"}]], "Thickness") + options_from_collection_for_select_with_data(@thicknesses, :distinct_thickness, :distinct_thickness, nil, {"type" => :type})) %>')
+			$("#thickness").prop('disabled', false)
+		<% end %>
+	<% else %>
+		$("#width").html('<%= j(options_for_select([["Width", {:disabled => "yes"}]], "Width") + options_from_collection_for_select_with_data(@widths, :distinct_width, :distinct_width, nil, {"type" => :type})) %>')
+		$("#width").prop('disabled', false)
+	<% end %>
+<% else %>
+	$("#grade").html('<%= j(options_for_select([["Grade", {:disabled => "yes"}]], "Grade") + options_from_collection_for_select(@grades, :id, :name)) %>')
+	$("#grade").prop('disabled', false)
+<% end %>

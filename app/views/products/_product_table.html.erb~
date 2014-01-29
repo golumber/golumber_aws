@@ -1,0 +1,11 @@
+<%
+=begin %>
+  @usage: render by calling the "productTable" helper in products_helper.rb
+      productTable(@products, imperial, activityColumn)
+<%
+=end %>
+<table id = "productTable">
+	<% products.each do |product| %>
+    <%= productTableRow(product, imperial, activityColumn, search) %>
+	<% end %>
+</table>

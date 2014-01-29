@@ -1,0 +1,168 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#results {
+	position: relative;
+	padding: 2%;	
+	margin-top: 50px;
+	min-width: 600px;
+	width:1004px;
+	min-height: 100px;
+	border-radius: 30px; 
+	overflow: auto;
+}
+
+
+div#specialForms{
+	margin: 0 auto;
+} 
+
+table#buttonHolder {
+	margin-top: 17px;
+	margin-right: 1.5%;
+	float: right;
+}
+
+div#UserInfo {
+	height: 200px;
+	margin-left:20px;
+	color:black;
+	border-radius: 30px; 
+	position:relative;
+}
+.productTableContainer {
+	float: left;
+	clear: left;
+	width: 100%;
+	position: relative;
+	overflow:auto;
+}
+.logoImg {
+	float:left;
+	height: 160px;
+	width: 160px;
+}
+button#toInv {
+	width: 100%;
+}
+label {
+}
+label.smallLabel {
+	font-weight: normal;
+	font-size: 15px;
+	width: auto;
+}
+table#companyBio {
+	border-radius: 30px;
+	padding: 3% 3% 3% 3%;
+	min-width: 359px;
+	width: 100%;
+}
+div#companyBio {
+	margin-left: 210px;
+	position:relative;
+}
+.labelWithLink {
+	margin-right:10px;
+	float:left;
+}
+
+table#productTable {
+	text-align: left;
+	width: 100%;
+	padding: 20%;
+	border-collapse: collapse;
+	white-space: nowrap;
+	}
+.searchUnit{
+	margin:0px auto;
+	margin-top: 50px;
+}
+.productTableHeader{
+	font-weight: bold;
+	position: relative;
+	overflow: auto;
+	width: float;
+	margin-right: 2cm;
+	margin-left: 2cm;
+}
+td{
+	max-width: 80px;
+	overflow: hidden;
+	text-overflow: elllipsis;
+	white-space: nowrap;
+}
+
+tr:hover {
+	 background: #f2f1f0;
+}
+
+div#topDiv{
+	width: 100%;
+	float:left;
+	margin-bottom: 5%;
+}
+
+div#leftDiv{
+	float:left;
+	width: 50%;
+}
+
+.leftDiv{
+	float:left;
+}
+
+div#rightDiv{
+	float:left;
+	width: 50%;
+}
+
+.rightDiv{
+	float:right;
+}
+
+div#bottomDiv{
+	width: 100%;
+	float:left;
+	margin-bottom: 5%;
+}
+
+textarea {
+	height:50px;
+}
+
+.descriptionSize{
+	width: 50%;
+}
+
+.productTableHolder {
+	margin-top: 30px;	
+	position: relative;
+}
+
+div#showImperialLength{
+	width: 150px;
+}
+div#showMetricLength{
+	width: 150px;
+}
+div#radios{
+	float:left;
+}
+
+table#productsTable td span {display: none;}
+table#productsTable td:hover span {
+	display: block;
+	position: absolute;
+	top: auto;
+	left: auto;
+	width: 200px;
+	word-wrap: break-word;
+	padding: 5px;
+	margin: 20px;
+	color: white;
+	background-color: rgba(1, 136, 181, 0.8);	
+	border-radius: 10px;
+	text-align: center;
+}

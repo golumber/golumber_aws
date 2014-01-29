@@ -1,0 +1,24 @@
+<%
+=begin %>
+  @usage: render by calling the "productTable" helper in products_helper.rb
+      productTable(@products, imperial, activityColumn)
+<%
+=end %>
+<tr>
+  <td style="width:100px"></td>
+  <td class="productTableHeader">Species</td>
+	<td class="productTableHeader"><%= Product.thickness_header(imperial) %></td>
+	<td class="productTableHeader">X</td>
+	<td class="productTableHeader"><%= Product.width_header(imperial) %></td>
+	<td class="productTableHeader">Grade</td>
+	<td class="productTableHeader"><%= Product.length_header(imperial) %></td>
+	<td class="productTableHeader"><%= Product.volume_header(imperial) %></td>
+	<td class="productTableHeader">Details</td>
+	<% if activityColumn %>
+		<td class="productTableHeader">Active / Inactive</td>
+	<% end %>
+	<% if search %>
+		<td class="productTableHeader">Region</td>
+		<td class="productTableHeader">Supplier</td>
+	<% end %>
+</tr>

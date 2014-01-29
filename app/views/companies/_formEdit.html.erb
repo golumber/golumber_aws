@@ -1,0 +1,113 @@
+<%= form_for(@company) do |f| %>
+	<% if @company.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@company.errors.count, "error") %> prohibited this user from being saved:</h2>
+			<ul>
+				<% @company.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div id="middleDiv">
+		<div id="leftDiv">
+			<div class="companyLabels">
+				<div class="companyField">
+					<%= f.label :name %>
+				</div>
+				<div class="companyField">
+					<%= f.label :street_address %>
+				</div>
+				<div class="companyField">
+					<%= f.label :city %>
+				</div>
+				<div class="companyField">
+					<%= f.label :state %>
+				</div>
+				<div class="companyField">
+					<%= f.label :country %>
+				</div>
+				<div class="companyField">
+					<%= f.label :zip_code %>
+				</div>
+			</div>
+			<div class="floatLeft">
+				<div class="field">
+					<%= f.text_field :name %>
+				</div>
+				<div class="field">
+					<%= f.text_field :street_address %>
+				</div>
+				<div class="field">
+					<%= f.text_field :city %>
+				</div>
+				<div class="field">
+					<%= f.text_field :state %>
+				</div>
+				<div class="field">
+					<%= f.text_field :country %>
+				</div>
+				<div class="field">
+					<%= f.text_field :zip_code %>
+				</div>
+			</div>
+		</div>
+		<div id="rightDiv">
+			<div class="floatLeft" style="margin-right: 20px;">
+				<div class="companyField">
+					<%= f.label :website %>
+				</div>
+				<div class="companyField">
+					<%= f.label :phone_number %>
+				</div>
+				<%= f.fields_for :employees do |employee| %>
+					<div class="companyField">
+						<%= employee.label :first_name, "First Name" %>
+					</div>
+					<div class="companyField">
+						<%= employee.label :last_name, "Last Name" %>
+					</div>
+					<div class="companyField">
+						<%= employee.label :skype %>
+					</div>
+				<% end %>
+			</div>
+			<div class="floatLeft">
+				<div class="field">
+					<%= f.text_field :website %>
+				</div>
+				<div class="field">
+					<%= f.telephone_field :phone_number %>
+				</div>
+				<%= f.fields_for :employees do |employee| %>
+					<div class="field">
+						<%= employee.text_field :first_name %>
+					</div>
+					<div class="field">
+						<%= employee.text_field :last_name %>
+					</div>
+					<div class="field">
+						<%= employee.text_field :skype %>
+					</div>
+				<% end %>
+			</div>
+			<div class="companyField" style="clear: left;">
+				<%= link_to "Change email or password", edit_employee_registration_path %>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<div class="field">
+		 <%= f.label :description, "Company Description", :class => "floatLeft" %>
+		 <%= f.text_area :description, :class => 'clearLeft' %>
+		</div>
+		<%= render :partial => 'photos/edit_photos_fields', :locals => {:f => f, :imageable => @company} %>
+	</div>
+
+	<div class="actions clearLeft">
+		<div><small>*Required Fields</small></div>
+		<%= f.submit "Save", :class => "genericButton" %>
+	</div>
+<% end %>

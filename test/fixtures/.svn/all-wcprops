@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/golumber/!svn/ver/470/wip/GoLumber/test/fixtures
+END
+species.yml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/golumber/!svn/ver/418/wip/GoLumber/test/fixtures/species.yml
+END
+photos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/golumber/!svn/ver/423/wip/GoLumber/test/fixtures/photos.yml
+END
+companies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/golumber/!svn/ver/470/wip/GoLumber/test/fixtures/companies.yml
+END
+mailing_lists.yml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/golumber/!svn/ver/116/wip/GoLumber/test/fixtures/mailing_lists.yml
+END
+employees.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/golumber/!svn/ver/165/wip/GoLumber/test/fixtures/employees.yml
+END
+units.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/golumber/!svn/ver/161/wip/GoLumber/test/fixtures/units.yml
+END
+products.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/golumber/!svn/ver/347/wip/GoLumber/test/fixtures/products.yml
+END
+grades.yml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/golumber/!svn/ver/418/wip/GoLumber/test/fixtures/grades.yml
+END
+referrals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/golumber/!svn/ver/160/wip/GoLumber/test/fixtures/referrals.yml
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/golumber/!svn/ver/115/wip/GoLumber/test/fixtures/.gitkeep
+END

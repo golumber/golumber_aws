@@ -1,0 +1,53 @@
+<div id="content">
+	<h1><%= @company.name %> Inventory</h1>
+	<div id="UserInfo">
+		<%= render 'companies/quickCompanyBio' %>
+	</div> <!-- end div#UserInfo -->
+	<% if @employee.can_manage?(@company.id) %>    				
+		<table id="buttonHolder">
+		  <tr>
+				<td><%= button_to 'Add Product', new_product_path, :method => :get , :class => "genericButton" %></td>
+  			<td><%= button_to 'Add Species', new_species_path, :method => :get , :class => "genericButton"  %></td>
+  			<td><%= button_to 'Add Grade', new_grade_path, :method => :get , :class => "genericButton"  %></td>
+  			<td><%= button_to 'My Species', species_index_path, :method => :get , :class => "genericButton" %></td>
+  			<td><%= button_to 'My Grades', grades_path, :method => :get, :class => "genericButton"  %></td>
+			</tr>
+		</table>				
+	<% end %>
+				
+	<div id ="results" class="gradient2">
+		<% if @employee.can_manage?(@company.id) %>   
+			<div style="float:left;">
+			  <div style="float:left; margin-right:10px">
+  				<%= label_tag "view_products_all", "All", :class => "smallLabel" %>
+          <%= radio_button_tag "view_products", "all", true, :class => "update_products" %>
+        </div>
+        <div style="float:left; margin-right:10px">
+          <%= label_tag "view_products_active", "Active", :class => "smallLabel" %>
+          <%= radio_button_tag "view_products", "active", false, :class => "update_products" %>
+        </div>
+        <div style="float:left; margin-right:10px">
+          <%= label_tag "view_products_inactive", "Inactive", :class => "smallLabel" %>
+          <%= radio_button_tag "view_products", "inactive", false, :class => "update_products" %>
+        </div>
+			</div>							
+		<% end %>
+		<div style="float:right;margin-right:10px;">
+      <div style="float:left; margin-right:10px">
+        <%= label_tag "unit_imperial", "Imperial", :class => "smallLabel" %>
+        <%= radio_button_tag "unit", "imperial", true, :class => "update_products" %>
+      </div>
+      <div style="float:left; margin-right:10px">
+        <%= label_tag "unit_metirc", "Metric", :class => "smallLabel" %>
+        <%= radio_button_tag "unit", "metric", false, :class => "update_products" %>
+      </div>
+		</div>
+		<div id="productTableContainer" class="productTableContainer" >
+			<div id="productTable"></div>
+		</div>
+	</div>
+	<div class= "footer">
+		<%=render :partial => 'layouts/footer'%>
+	</div>
+</div>
+<%= addUpdateProductsOnChange %>
